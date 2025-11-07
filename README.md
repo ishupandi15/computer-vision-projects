@@ -138,14 +138,6 @@ If you use or reference this work, please cite:
 
 ---
 
-## 👩‍💻 Authors
-| Name | GitHub | Role |
-|------|---------|------|
-| **Ishwariya P.** | [ishupandi15](https://github.com/ishupandi15) | Lead Developer / Research / Documentation |
-| **Lakshmi Prabha R.** | — | Co-Developer |
-| **Mythireyeni P. V.** | — | Documentation & Presentation |
-| **Neelaveni M.** | — | Testing & Analysis |
-
 📧 **Contact:** [ishupandi15@gmail.com](mailto:ishupandi15@gmail.com)
 
 ---
