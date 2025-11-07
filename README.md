@@ -1,6 +1,6 @@
-<!-- Banner -->
+<!-- Header Banner -->
 <p align="center">
-  <img src="cover.jpg" alt="Computer Vision Cover" width="100%" />
+  <img src="cover.jpg" alt="Computer Vision Banner" width="100%"/>
 </p>
 
 <h3 align="center">🧠 Undergraduate Computer Vision Projects</h3>
@@ -10,114 +10,107 @@
 ---
 
 ## 👩‍🎓 About the Projects
-These projects were developed as part of the undergraduate curriculum by  
-**Ishwariya P.**, **Lakshmi Prabha R.**, **Mythireyeni P. V.**, and **Neelaveni M.**  
-**Department of Information Technology**  
-**SRM Valliammai Engineering College (Autonomous)**  
-Affiliated to **Anna University, Chennai – 603203**  
-📅 *March 2022*
+
+<p align="center">
+Developed as part of the undergraduate program by  
+<br>
+<b>Ishwariya P.</b> • <b>Lakshmi Prabha R.</b> • <b>Mythireyeni P. V.</b> • <b>Neelaveni M.</b>  
+<br>
+Department of Information Technology,  
+<br>
+<b>SRM Valliammai Engineering College (Autonomous)</b> — Affiliated to <b>Anna University, Chennai</b>  
+<br>
+📅 <i>March 2022</i>
+</p>
 
 ---
 
 ## 🌐 Repository Links
-| Project | Description | GitHub Link |
-|----------|--------------|--------------|
-| 🔥 **Fire Detection** | Real-time computer vision fire & smoke detection with automatic email + SMS alerts. | [View on GitHub →](https://github.com/ishupandi15/computer-vision-projects/tree/main/fire_detection) |
-| 🚗 **License Plate Detection** | Vehicle license plate detection & OCR recognition using TensorFlow + Tesseract. | [View on GitHub →](https://github.com/ishupandi15/computer-vision-projects/tree/main/license_plate_detection) |
+
+<p align="center">
+  <a href="https://github.com/ishupandi15/computer-vision-projects/tree/main/fire_detection">
+    <img src="https://img.shields.io/badge/🔥_Fire_Detection-blueviolet?style=for-the-badge&logo=python&logoColor=white" alt="Fire Detection"/>
+  </a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/ishupandi15/computer-vision-projects/tree/main/license_plate_detection">
+    <img src="https://img.shields.io/badge/🚗_License_Plate_Detection-00BFFF?style=for-the-badge&logo=tensorflow&logoColor=white" alt="License Plate Detection"/>
+  </a>
+</p>
 
 ---
 
 ## 🔥 Fire Detection — Main Project (IRJET Published)
 
 ### 🧭 Overview
-- A **Computer Vision-Based Early Fire Detection System** using image processing and machine learning.  
-- Detects **fire and smoke** through webcam feed and automatically sends **email alerts** to the **user** and the **nearest fire department**.  
-- Triggers both a **sound alarm** and an **SMS alert** for quick emergency response.  
-- Published in *International Research Journal of Engineering and Technology (IRJET)*, Vol. 9, Issue 4 (2022).
+A **Computer Vision-Based Early Fire Detection System** built using Python and OpenCV.  
+It detects **fire and smoke** from live webcam feed, sends **automatic email alerts** to the **user** and the **nearest fire department**, and triggers both a **sound alarm** and **SMS notification** for emergency response.  
+Published in *IRJET – Volume 9, Issue 4 (2022).*
 
-### ⚙️ Core Features
-✅ Real-time fire & smoke detection via webcam  
-✅ Haar Cascade + AdaBoost for accurate classification  
-✅ Analysis across **RGB**, **YCbCr**, and **Lab** color spaces  
-✅ **Email alerts** to user and fire department  
-✅ **SMS notifications** for emergency awareness  
-✅ **Sound alarm activation** (`alarm.wav`)  
-✅ Detects **smoke and early heat signatures**  
-✅ Accuracy ≈ **98.9 %**, False Detection ≈ **1.1 %**
+### ⚙️ Key Highlights
+- Real-time fire & smoke detection using **OpenCV**  
+- Haar Cascade + AdaBoost for classification  
+- Multiple color-space analysis: **RGB**, **YCbCr**, **Lab**  
+- Automatic **email & SMS alerts**  
+- **Sound alarm activation** (using `pygame`)  
+- Detects **early-stage smoke & heat**  
+- Achieved **98.9% accuracy** with only **1.1% false detection**
 
 ### 🧠 Tech Stack
-`Python`  •  `OpenCV`  •  `NumPy`  •  `Pygame`  •  `smtplib`  •  `Twilio API`
-
-### 🗂 Folder Overview
-```
-fire_detection/
-│
-├── Code/                →  main program (Fire detection.py)
-├── Presentation/        →  project slides
-├── Publication/         →  IRJET paper (V9I4332.pdf)
-└── report/              →  final report and documentation
-```
+`Python` • `OpenCV` • `NumPy` • `Pygame` • `smtplib` • `Twilio API`
 
 ---
 
 ## 🚗 License Plate Detection — Mini Project
 
 ### 🧭 Overview
-- Mini project focusing on **vehicle license plate recognition** using classical ML and OCR.  
-- Served as the foundation for the later fire detection system.  
-- Handles **blurred, rotated, and low-light images** effectively.
+A **machine learning-based vehicle license plate recognition system** using TensorFlow and Tesseract OCR.  
+It identifies and extracts plate regions, processes text using OCR, and performs reliably even in **low light** or **motion-blur** conditions.
 
-### ⚙️ Core Features
-✅ Detects and extracts license plate regions  
-✅ Performs **OCR text extraction** with Tesseract  
-✅ Uses **HOG** & **LBP** for feature extraction  
-✅ Employs **SVM** and **Extreme Learning Machine (ELM)** classifiers  
-✅ Accuracy ≈ **99.62 %**, False Positives ≈ **1.675 %**
+### ⚙️ Key Highlights
+- License plate region detection via contour extraction  
+- **Text recognition** using Tesseract OCR  
+- Feature extraction using **HOG** + **LBP**  
+- Classification with **SVM** + **ELM**  
+- Works under varying angles, rotation, and brightness  
+- Achieved **99.62% detection rate** with **1.675% false positives**
 
 ### 🧠 Tech Stack
-`Python`  •  `TensorFlow`  •  `OpenCV`  •  `Tesseract OCR`
-
-### 🗂 Folder Overview
-```
-license_plate_detection/
-│
-├── Abstract/           →  project abstract
-├── Presentation/       →  slides (License plate.pptx)
-└── report/             →  report (REAL TIME LICENSE PLATE DETECTION USING TENSORFLOW AND TESSERACT.docx)
-```
+`Python` • `TensorFlow` • `OpenCV` • `Tesseract OCR`
 
 ---
 
 ## 🧩 Completed Features
-- 🔹 Real-time **fire & smoke detection**  
-- 🔹 **Email & SMS notifications**  
-- 🔹 **Alarm activation** for local alerts  
-- 🔹 **Smoke & heat pattern analysis**  
-- 🔹 **License plate detection + OCR recognition**  
-- 🔹 **High precision with minimal false alarms**
+
+<p align="center">
+  <img src="https://img.shields.io/badge/✅%20Real--time%20Fire%20&%20Smoke%20Detection-forestgreen?style=for-the-badge" alt="Fire & Smoke Detection"/>
+  <img src="https://img.shields.io/badge/📧%20Email%20&%20SMS%20Alerts-blue?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/🔊%20Alarm%20System-orange?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/📷%20License%20Plate%20OCR-yellow?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/🔥%20Smoke%20%26%20Heat%20Pattern%20Detection-red?style=for-the-badge"/>
+</p>
 
 ---
 
 ## 🏆 Results & Highlights
-✨ Fire Detection Accuracy: **98.9 %**  
-✨ License Plate Detection Accuracy: **99.62 %**  
-✨ False Detection Rate: ~ **1 %**  
-📘 Publication: **IRJET**, Apr 2022 (Vol. 9, Issue 4)
+- **Fire Detection Accuracy:** 98.9%  
+- **License Plate Detection Accuracy:** 99.62%  
+- **False Detection Rate:** ~1%  
+- **Publication:** *IRJET, April 2022 (Vol. 9, Issue 4)*  
 
 ---
 
 ## 📜 License
-Distributed under the **MIT License**.  
-You may use, modify, and share this work with proper attribution.
+Distributed under the **MIT License** — use, modify, and share freely with attribution.
 
 ---
 
 ## 🏫 Acknowledgment
-Developed under the guidance of **Dr. A. R. Revathi**, Associate Professor,  
-**Department of Information Technology, SRM Valliammai Engineering College.**
+Guided by **Dr. A. R. Revathi**, Associate Professor,  
+**Department of Information Technology**,  
+**SRM Valliammai Engineering College (Autonomous)**.  
 
-The **Fire Detection System**, featuring **email, SMS, and alarm alerting**,  
-was **published in IRJET (Vol. 9, Issue 4, 2022)** as part of academic research.
+The **Fire Detection System**, featuring **email, SMS, and alarm alerts**,  
+was **published in IRJET (Vol. 9, Issue 4, 2022)** as part of the undergraduate research project.
 
 ---
 
@@ -129,17 +122,29 @@ If you use or reference this work, please cite:
 > Ishwariya P., Lakshmi Prabha R., Mythireyeni P. V., and Neelaveni M.,  
 > "Computer Vision-Based Early Fire Detection Using Machine Learning,"  
 > *International Research Journal of Engineering and Technology (IRJET)*,  
-> vol. 9, no. 4, pp. 332 – 336, Apr. 2022.
+> vol. 9, no. 4, pp. 332–336, Apr. 2022.
 
 **APA Format:**  
 > Ishwariya, P., Lakshmi Prabha, R., Mythireyeni, P. V., & Neelaveni, M. (2022).  
 > *Computer Vision-Based Early Fire Detection Using Machine Learning.*  
-> International Research Journal of Engineering and Technology (IRJET), 9(4), 332 – 336.
+> International Research Journal of Engineering and Technology (IRJET), 9(4), 332–336.
 
 ---
+
+## 👩‍💻 Authors
+
+<p align="center">
+  <b>Ishwariya P.</b> — <a href="https://github.com/ishupandi15">GitHub</a>  
+  <br>
+  <b>Lakshmi Prabha R.</b> • <b>Mythireyeni P. V.</b> • <b>Neelaveni M.</b>
+</p>
 
 📧 **Contact:** [ishupandi15@gmail.com](mailto:ishupandi15@gmail.com)
 
 ---
 
-<p align="center">✨ <b>Thank you for visiting!</b> ✨<br>⭐ Star this repository if you found it useful!</p>
+<p align="center">
+  ⭐ <b>If you found this project interesting, consider starring the repository!</b> ⭐  
+  <br><br>
+  <img src="https://img.shields.io/github/stars/ishupandi15/computer-vision-projects?style=social" alt="GitHub stars"/>
+</p>
