@@ -1,6 +1,6 @@
-<!-- Header Banner -->
-<p align="center">
-  <img src="cover.jpg" alt="Computer Vision Banner" width="100%"/>
+<!-- Full-Width Banner -->
+<p align="center" style="background-color:#000000;">
+  <img src="cover.jpg" alt="Computer Vision Banner" width="100%" height="auto" style="border-radius:10px;"/>
 </p>
 
 <h3 align="center">🧠 Undergraduate Computer Vision Projects</h3>
@@ -9,7 +9,7 @@
 
 ---
 
-## 👩‍🎓 About the Projects
+## 🧑‍🎓 About the Projects
 
 <p align="center">
 Developed as part of the undergraduate program by  
@@ -43,20 +43,31 @@ Department of Information Technology,
 
 ### 🧭 Overview
 A **Computer Vision-Based Early Fire Detection System** built using Python and OpenCV.  
-It detects **fire and smoke** from live webcam feed, sends **automatic email alerts** to the **user** and the **nearest fire department**, and triggers both a **sound alarm** and **SMS notification** for emergency response.  
+Detects **fire and smoke** from live webcam feed, sends **automatic email alerts** to the **user** and **nearest fire department**, and triggers both a **sound alarm** and **SMS notification** for emergency response.  
 Published in *IRJET – Volume 9, Issue 4 (2022).*
 
 ### ⚙️ Key Highlights
 - Real-time fire & smoke detection using **OpenCV**  
-- Haar Cascade + AdaBoost for classification  
-- Multiple color-space analysis: **RGB**, **YCbCr**, **Lab**  
-- Automatic **email & SMS alerts**  
-- **Sound alarm activation** (using `pygame`)  
-- Detects **early-stage smoke & heat**  
+- Haar Cascade + AdaBoost for accurate classification  
+- Analyzes multiple color spaces: **RGB**, **YCbCr**, **Lab**  
+- Sends **email alerts** to user and fire department  
+- Sends **SMS notifications** for emergency awareness  
+- Plays **sound alarm** using `pygame`  
+- Detects **smoke and early heat signatures**  
 - Achieved **98.9% accuracy** with only **1.1% false detection**
 
 ### 🧠 Tech Stack
 `Python` • `OpenCV` • `NumPy` • `Pygame` • `smtplib` • `Twilio API`
+
+### 🗂 Folder Overview
+```
+fire_detection/
+│
+├── Code/                →  main program (Fire detection.py)
+├── Presentation/        →  project slides
+├── Publication/         →  IRJET paper (V9I4332.pdf)
+└── report/              →  final report and documentation
+```
 
 ---
 
@@ -67,15 +78,24 @@ A **machine learning-based vehicle license plate recognition system** using Tens
 It identifies and extracts plate regions, processes text using OCR, and performs reliably even in **low light** or **motion-blur** conditions.
 
 ### ⚙️ Key Highlights
-- License plate region detection via contour extraction  
-- **Text recognition** using Tesseract OCR  
-- Feature extraction using **HOG** + **LBP**  
-- Classification with **SVM** + **ELM**  
+- Detects and extracts license plate regions  
+- Performs **OCR text extraction** with Tesseract  
+- Uses **HOG** & **LBP** for feature extraction  
+- Employs **SVM** and **Extreme Learning Machine (ELM)** classifiers  
 - Works under varying angles, rotation, and brightness  
 - Achieved **99.62% detection rate** with **1.675% false positives**
 
 ### 🧠 Tech Stack
 `Python` • `TensorFlow` • `OpenCV` • `Tesseract OCR`
+
+### 🗂 Folder Overview
+```
+license_plate_detection/
+│
+├── Abstract/           →  project abstract
+├── Presentation/       →  slides (License plate.pptx)
+└── report/             →  report (REAL TIME LICENSE PLATE DETECTION USING TENSORFLOW AND TESSERACT.docx)
+```
 
 ---
 
