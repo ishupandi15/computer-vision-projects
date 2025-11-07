@@ -1,154 +1,163 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Computer Vision Projects — Ishwariya P.</title>
-  <meta name="description" content="Undergraduate Computer Vision Projects: Fire Detection and License Plate Detection guided by Dr. A. R. Revathi and Mr. M. Asan Nainar." />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Computer Vision Projects | Ishwariya P.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
   <style>
-    :root{
-      --bg:#061016;
-      --accent:#ff6b2d;
-      --muted:#b7c4ce;
-      --btn-grad:linear-gradient(90deg,#ff6b2d,#ff3d5b);
-    }
-    *{box-sizing:border-box}
+    *{box-sizing:border-box;margin:0;padding:0}
     body{
-      margin:0;
-      font-family:'Poppins',system-ui,Segoe UI,Roboto,Arial;
-      background:var(--bg);
-      color:#eef6ff;
-      -webkit-font-smoothing:antialiased;
+      font-family:"Poppins",system-ui,-apple-system,Segoe UI,Roboto,Arial;
+      background:#060709;color:#fff;text-align:center;line-height:1.5;overflow-x:hidden;
     }
 
     /* HERO */
-    header{
-      position:relative;
-      height:62vh;
-      min-height:420px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      overflow:hidden;
-      text-align:center;
-    }
-    header img{
-      position:absolute;
-      inset:0;
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      filter:brightness(0.55);
-    }
-    header .overlay{
-      position:relative;
-      z-index:2;
-      padding:2rem;
-      max-width:960px;
-    }
-    header .eyebadge{
-      color:var(--muted);
-      font-weight:600;
-      font-size:.95rem;
-      margin-bottom:.4rem;
-    }
-    header h1{font-size:2.1rem;margin:.2rem 0;letter-spacing:-.02em}
-    header p.lead{color:var(--muted);max-width:760px;margin:.6rem auto 1.2rem;line-height:1.5}
+    header{position:relative;width:100%;height:100vh;min-height:420px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+    header img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(0.60) contrast(1.03)}
+    header::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(2,6,10,0.55) 0%, rgba(2,6,10,0.85) 70%)}
 
-    .cta{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
-    .btn{
-      display:inline-block;
-      background:var(--btn-grad);
-      color:#fff;
-      padding:.9rem 1.8rem;
-      border-radius:999px;
-      font-weight:700;
-      text-decoration:none;
-      transition:.2s ease;
-      box-shadow:0 8px 24px rgba(255,107,45,.15);
-    }
-    .btn:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(255,107,45,.22)}
+    .overlay{position:relative;z-index:2;max-width:1100px;padding:2rem 1.25rem;display:flex;flex-direction:column;align-items:center;gap:0.6rem}
+
+    /* animation */
+    .fade-up{opacity:0;transform:translateY(14px);animation:fadeUp .65s cubic-bezier(.2,.9,.3,1) forwards}
+    .delay-1{animation-delay:0.1s}
+    .delay-2{animation-delay:0.25s}
+    .delay-3{animation-delay:0.45s}
+    @keyframes fadeUp{to{opacity:1;transform:none}}
+
+    h1{font-size:2.6rem;font-weight:600;letter-spacing:-0.01em;margin:0 0 .1rem}
+    h2{font-size:1.05rem;font-weight:400;color:#d6dce3;opacity:.95;margin:0}
+
+    /* buttons */
+    .buttons{display:flex;gap:1rem;margin-top:1.35rem;flex-wrap:wrap;justify-content:center}
+    .btn{display:inline-block;padding:.85rem 1.6rem;border-radius:999px;font-weight:600;color:#fff;text-decoration:none;background:linear-gradient(90deg,#ff2d6c,#ff7a2d);box-shadow:0 10px 30px rgba(255,90,60,0.12);transition:transform .18s,box-shadow .18s}
+    .btn:hover{transform:translateY(-4px);box-shadow:0 18px 38px rgba(255,90,60,0.18)}
 
     /* CONTENT */
-    .container{max-width:900px;margin:2.5rem auto;padding:0 1.25rem;color:var(--muted);line-height:1.6}
-    h3{color:#fff;margin-bottom:.5rem}
-    .links a{color:#98c7ff;text-decoration:none;border-bottom:1px dashed rgba(152,199,255,.1)}
-    ul{margin:0;padding-left:1.25rem}
-    li{margin-bottom:.4rem}
-    footer{color:var(--muted);text-align:center;padding:2rem 1rem;border-top:1px solid rgba(255,255,255,.05)}
-    @media(max-width:720px){header h1{font-size:1.4rem}}
+    main{max-width:980px;margin:40px auto;padding:0 18px;color:#d6dce3}
+    section{padding:28px 0;border-top:1px solid rgba(255,255,255,0.03)}
+    section h3{color:#ff7a2d;font-size:1.2rem;margin-bottom:.6rem}
+    p{color:#c9d4df}
+
+    /* stats */
+    .stats{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:18px}
+    .stat{background:rgba(255,255,255,0.02);padding:14px 18px;border-radius:12px;min-width:220px;border:1px solid rgba(255,255,255,0.03)}
+    .stat strong{display:block;font-size:1.25rem;color:#fff}
+    .muted{color:#b6c2cf}
+
+    /* technologies */
+    .tech-stack{display:flex;justify-content:center;flex-wrap:wrap;gap:.6rem;margin-top:1.4rem}
+    .tech{
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.08);
+      padding:.5rem 1rem;
+      border-radius:999px;
+      font-weight:500;
+      font-size:.9rem;
+      color:#fff;
+      animation:pulse 3s ease-in-out infinite;
+      transition:transform .2s;
+    }
+    .tech:hover{transform:translateY(-3px)}
+    @keyframes pulse{
+      0%{box-shadow:0 0 0 rgba(255,122,45,0);}
+      50%{box-shadow:0 0 14px rgba(255,122,45,0.45);}
+      100%{box-shadow:0 0 0 rgba(255,122,45,0);}
+    }
+
+    /* footer */
+    footer{padding:22px 12px;color:#aab6c4;font-size:0.95rem;border-top:1px solid rgba(255,255,255,0.02);margin-top:26px}
+
+    @media (max-width:820px){
+      h1{font-size:1.8rem}
+      header{height:62vh}
+      .stat{min-width:170px}
+    }
   </style>
 </head>
 <body>
 
-  <!-- HERO -->
-  <header>
-    <img src="cover.jpg" alt="Computer Vision banner" />
-    <div class="overlay">
-      <div class="eyebadge">🧠 Undergraduate Computer Vision Projects</div>
-      <h1>🔥 Fire Detection & 🚗 License Plate Detection</h1>
-      <p class="lead">
-        Real-time computer vision projects developed during undergraduate studies —
-        one focused on early fire detection and alerting, and the other on automatic license plate recognition.
+  <header role="banner">
+    <img src="cover.jpg" alt="Computer Vision banner"/>
+    <div class="overlay" aria-label="Hero">
+      <h1 class="fade-up delay-1">Undergraduate Computer Vision Projects</h1>
+      <p class="fade-up delay-2" style="margin-top:6px;color:#d0d7df;">
+        🔥 Fire Detection (Main Project) &nbsp;&nbsp; • &nbsp;&nbsp; 🚗 License Plate Detection (Mini Project)
       </p>
-      <div class="cta">
+
+      <div class="buttons fade-up delay-3" role="navigation" aria-label="Project links">
         <a class="btn" href="https://github.com/ishupandi15/computer-vision-projects/tree/main/fire_detection" target="_blank">🔥 View Fire Detection</a>
         <a class="btn" href="https://github.com/ishupandi15/computer-vision-projects/tree/main/license_plate_detection" target="_blank">🚗 View License Plate Detection</a>
       </div>
     </div>
   </header>
 
-  <!-- MAIN -->
-  <main class="container">
-    <section>
-      <h3>Project Overview</h3>
-      <p>
-        Both projects were created as part of the undergraduate curriculum to explore computer vision and real-time detection systems.
-        The work demonstrates end-to-end implementation using Python, OpenCV, TensorFlow, and Tesseract OCR.
+  <main role="main">
+    <section aria-labelledby="about">
+      <h3 id="about">About the Projects</h3>
+      <p class="muted">
+        Developed by <strong>Ishwariya P.</strong>, <strong>Lakshmi Prabha R.</strong>, <strong>Mythireyeni P. V.</strong>, and <strong>Neelaveni M.</strong><br>
+        Department of Information Technology — SRM Valliammai Engineering College (Autonomous), affiliated with Anna University.
       </p>
     </section>
 
-    <section>
-      <h3>🔥 Fire Detection</h3>
-      <ul>
-        <li>Detects fire and smoke from live video using Haar-cascade features, integral image analysis, and AdaBoost classification.</li>
-        <li>Utilizes multi-color-space processing (RGB, YCbCr, Lab) and morphological filtering to improve accuracy.</li>
-        <li>Triggers audible alarm, sends automatic email to the concerned person and the fire department, plus SMS alerts.</li>
-        <li>Published in <a href="https://www.irjet.net/archives/V9/i4/IRJET-V9I4332.pdf" target="_blank">IRJET, Vol 9 Issue 4 (2022)</a>.</li>
-        <li><strong>Guided by Mr. M. Asan Nainar</strong> (Computer Vision Course / Fire Detection Project Mentor).</li>
-      </ul>
-    </section>
-
-    <section>
-      <h3>🚗 License Plate Detection</h3>
-      <ul>
-        <li>Automatic license plate detection and OCR recognition using HOG + LBP features with SVM / ELM classifiers.</li>
-        <li>Handles various conditions — low light, motion blur, angle distortion.</li>
-        <li>Achieved 99.62 % detection rate with 1.675 % false positives.</li>
-        <li><strong>Guided by Dr. A. R. Revathi</strong> (Main Project Supervisor).</li>
-      </ul>
-    </section>
-
-    <section>
-      <h3>Results Summary</h3>
-      <ul>
-        <li>Fire Detection Accuracy — <strong>98.9 %</strong>  |  False Detection ~ 1 %</li>
-        <li>License Plate Detection Accuracy — <strong>99.62 %</strong>  |  False Positives ~ 1.675 %</li>
-      </ul>
-    </section>
-
-    <section>
-      <h3>Contact</h3>
+    <section aria-labelledby="fire">
+      <h3 id="fire">🔥 Fire Detection (Main Project)</h3>
       <p>
-        <a class="links" href="mailto:ishupandi15@gmail.com">📧 ishupandi15@gmail.com</a><br>
-        GitHub Repo: <a class="links" href="https://github.com/ishupandi15/computer-vision-projects" target="_blank">ishupandi15/computer-vision-projects</a>
+        Real-time Computer Vision system for early fire & smoke detection.<br>
+        Sends automatic email & SMS alerts and triggers a local audible alarm for immediate response.
+        <br><br>
+        <a href="https://www.irjet.net/archives/V9/i4/IRJET-V9I4332.pdf" target="_blank" style="color:#ff8a3a;text-decoration:none;font-weight:600">Published — IRJET, Volume 9, Issue 4 (2022)</a>
+      </p>
+      <p class="muted" style="margin-top:10px"><strong>Project Mentor:</strong> Mr. M. Asan Nainar</p>
+
+      <div class="stats">
+        <div class="stat"><strong>98.9%</strong><span class="muted">Fire Detection Accuracy</span></div>
+        <div class="stat"><strong>~1%</strong><span class="muted">False Detection</span></div>
+      </div>
+
+      <div class="tech-stack">
+        <span class="tech">Python</span>
+        <span class="tech">OpenCV</span>
+        <span class="tech">NumPy</span>
+        <span class="tech">Pygame</span>
+        <span class="tech">smtplib</span>
+        <span class="tech">Twilio API</span>
+      </div>
+    </section>
+
+    <section aria-labelledby="plate">
+      <h3 id="plate">🚗 License Plate Detection (Mini Project)</h3>
+      <p>
+        Vehicle license plate localization and OCR using TensorFlow + Tesseract for robust text extraction under varying conditions.
+      </p>
+      <p class="muted" style="margin-top:10px"><strong>Supervisor:</strong> Dr. A. R. Revathi</p>
+
+      <div class="stats">
+        <div class="stat"><strong>99.62%</strong><span class="muted">License Plate Detection Accuracy</span></div>
+        <div class="stat"><strong>~1.675%</strong><span class="muted">False Positives</span></div>
+      </div>
+
+      <div class="tech-stack">
+        <span class="tech">Python</span>
+        <span class="tech">TensorFlow</span>
+        <span class="tech">OpenCV</span>
+        <span class="tech">Tesseract OCR</span>
+        <span class="tech">Machine Learning</span>
+      </div>
+    </section>
+
+    <section aria-labelledby="repo" style="padding-bottom:30px">
+      <p style="margin-top:6px;color:#d0d7df">
+        🔗 Repository: <a href="https://github.com/ishupandi15/computer-vision-projects" target="_blank" style="color:#ff8a3a;text-decoration:none;font-weight:600">ishupandi15/computer-vision-projects</a>
       </p>
     </section>
   </main>
 
   <footer>
-    © 2025 Ishwariya P. — Fire Detection paper published in IRJET (Vol. 9, Issue 4, 2022). All rights reserved.
+    © 2025 Ishwariya P. — <a href="mailto:ishupandi15@gmail.com" style="color:#ff8a3a;text-decoration:none">ishupandi15@gmail.com</a> | Published in IRJET Vol. 9, Issue 4 (2022)
   </footer>
 
 </body>
